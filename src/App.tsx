@@ -4,17 +4,17 @@ import { useEffect, useState } from 'react';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-import { ActionButton, NoData } from '../components';
-import { GridContainer } from '../containers';
-import { CardCharacter } from "../components";
-import { useGetCharactersByNameQuery, useGetCharactersQuery } from '../api/rickMortyApi';
-import { LoadingIndicator } from '../components/LoadingIndicator';
+import { ActionButton, NoData } from './components';
+import { GridContainer } from './containers';
+import { CardCharacter } from "./components";
+import { useGetCharactersByNameQuery, useGetCharactersQuery } from './api/rickMortyApi';
+import { LoadingIndicator } from './components/LoadingIndicator';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../store';
-import { HistoryDataState, nextPage, previousPage, resetStatePage } from '../store/historyDataSlice';
-import { NavBar } from '../components/NavBar';
+import { AppDispatch, RootState } from './store';
+import { HistoryDataState, nextPage, previousPage, resetStatePage } from './store/historyDataSlice';
+import { NavBar } from './components/NavBar';
 
-export const HomePage = () => {
+export const App = () => {
 
   const [search, setSearch] = useState('');
 
