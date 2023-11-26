@@ -3,7 +3,7 @@ import { FC } from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 
-import { Character } from '../../domain/interfaces';
+import { Character } from '../interfaces';
 import { useNavigate } from 'react-router-dom';
 
 export const CardCharacter: FC<{ character: Character }> = ({ character }) => {
@@ -21,9 +21,9 @@ export const CardCharacter: FC<{ character: Character }> = ({ character }) => {
         image={character.image}
         alt={character.name}
         sx={{
-          height: '100%', // Asegura que la imagen cubra toda la altura de la tarjeta
-          width: '100%', // Asegura que la imagen cubra todo el ancho de la tarjeta
-          objectFit: 'fill' // Asegura que la imagen cubra el espacio disponible sin distorsionarse
+          height: '100%', 
+          width: '100%', 
+          objectFit: 'fill' 
         }}
       />
       
