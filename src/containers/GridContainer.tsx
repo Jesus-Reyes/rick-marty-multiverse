@@ -1,7 +1,7 @@
 import styled from '@mui/system/styled';
 import { Box } from '@mui/material';
 
-export const CharactersGrid = styled(Box)({
+export const GridContainer = styled(Box)({
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fill, minmax(230px, 1fr))',
   gap: '16px',

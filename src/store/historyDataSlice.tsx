@@ -14,13 +14,13 @@ const initialState : HistoryDataState = {
 }
 
 export const historyDataSlice =  createSlice({
-  name: 'visitedCharacters',
+  name: 'historyData',
   initialState,
   reducers: {
 
     nextPage: (state) => {
       state.lastPage = state.lastPage + 1;
-      localStorage.setItem('lastPage',state.lastPage.toString());
+      localStorage.setItem('lastPage', state.lastPage.toString());
     }, 
 
     previousPage: (state) => {
@@ -28,9 +28,14 @@ export const historyDataSlice =  createSlice({
         state.lastPage = state.lastPage - 1 ;
       }
       localStorage.setItem('lastPage',state.lastPage.toString());
+    }, 
+    resetStatePage: (state)=> {
+      state.lastPage = 1;
+
     }
+
   }
 });
 
 
-export const { nextPage, previousPage} = historyDataSlice.actions;
+export const { nextPage, previousPage, resetStatePage} = historyDataSlice.actions;
